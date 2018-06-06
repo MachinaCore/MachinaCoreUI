@@ -137,11 +137,14 @@ const AjaxLoad = (($) => {
 
       // Setup Breadcrumb
       let menuName = '<li class="breadcrumb-item"><a href="/">Home</a></li>'
-      $.menuElement = $(`$('nav .nav li:has(a[href="${url.split('?')[0]}"])')`)
+      /* eslint-disable */
+      $.menuElement = $('nav .nav li:has(a[href="' + url.split('?')[0] + '"])')
       if ($.menuElement.parent().parent().hasClass('nav-dropdown open')) {
-        menuName += `<li class='breadcrumb-item'>${$.menuElement.parent().parent().find('span:first').text()}</li>`
+        $.menuElementParentName = $.menuElement.parent().parent().find('span:first').text()
+        menuName += '<li class="breadcrumb-item">' + $.menuElementParentName + '</li>'
       }
-      menuName += `<li class="breadcrumb-item active">${$(`nav .nav li:has(a[href="${url.split('?')[0]}"])`).find('.active').find('span').first().text()}</li>`
+      menuName += '<li class="breadcrumb-item active">' + $('nav .nav li:has(a[href="' + url.split('?')[0] + '"])').find('.active').find('span').first().text() + '</li>'
+      /* eslint-enable */
       $('#breadcrumb').html(menuName)
 
       this.loadPage(url)
