@@ -41,9 +41,9 @@ const AjaxLoad = (($) => {
   }
 
   const Default = {
-    defaultPage       : 'main.html',
-    errorPage         : '404.html',
-    subpagesDirectory : 'views/'
+    defaultPage       : 'views/main.html',
+    errorPage         : 'views/404.html',
+    subpagesDirectory : ''
   }
 
   class AjaxLoad {
@@ -74,6 +74,10 @@ const AjaxLoad = (($) => {
     // Public
 
     loadPage(url) {
+      if (typeof window.preparePage === 'function') {
+        window.preparePage()
+      }
+
       const element = this._element
       const config = this._config
 
@@ -105,9 +109,9 @@ const AjaxLoad = (($) => {
           const wrapper = document.createElement('div')
           wrapper.innerHTML = result
 
-          const scripts = Array.from(wrapper.querySelectorAll('script')).map((script) => script.attributes.getNamedItem('src').nodeValue)
+          const scripts = Array.from(wrapper.querySelectorAll('script[src]')).map((script) => script.attributes.getNamedItem('src').nodeValue)
 
-          wrapper.querySelectorAll('script').forEach((script) => script.parentNode.removeChild(script))
+          wrapper.querySelectorAll('script[src]').forEach((script) => script.parentNode.removeChild(script))
 
           $('body').animate({
             scrollTop: 0
@@ -128,8 +132,17 @@ const AjaxLoad = (($) => {
       $(Selector.NAV_LINK).removeClass(ClassName.ACTIVE)
       $(Selector.NAV_DROPDOWN).removeClass(ClassName.OPEN)
 
-      $(`${Selector.NAV_DROPDOWN}:has(a[href="${url.replace(/^\//, '').split('?')[0]}"])`).addClass(ClassName.OPEN)
-      $(`${Selector.NAV_ITEM} a[href="${url.replace(/^\//, '').split('?')[0]}"]`).addClass(ClassName.ACTIVE)
+      $(`${Selector.NAV_DROPDOWN}:has(a[href="${url.split('?')[0]}"])`).addClass(ClassName.OPEN)
+      $(`${Selector.NAV_ITEM} a[href="${url.split('?')[0]}"]`).addClass(ClassName.ACTIVE)
+
+      // Setup Breadcrumb
+      let menuName = '<li class="breadcrumb-item"><a href="/">Home</a></li>'
+      $.menuElement = $(`$('nav .nav li:has(a[href="${url.split('?')[0]}"])')`)
+      if ($.menuElement.parent().parent().hasClass('nav-dropdown open')) {
+        menuName += `<li class='breadcrumb-item'>${$.menuElement.parent().parent().find('span:first').text()}</li>`
+      }
+      menuName += `<li class="breadcrumb-item active">${$(`nav .nav li:has(a[href="${url.split('?')[0]}"])`).find('.active').find('span').first().text()}</li>`
+      $('#breadcrumb').html(menuName)
 
       this.loadPage(url)
     }
