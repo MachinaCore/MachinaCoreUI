@@ -5,7 +5,7 @@
   padding: 0;
   margin: 0;
   background-color: $navbar-bg;
-  @include borders($navbar-border);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 
   .navbar-brand {
     display: inline-flex;
@@ -15,12 +15,29 @@
     height: $navbar-height;
     padding: 0;
     margin-right: 0;
+    overflow: hidden;
     background-color: $navbar-brand-bg;
-    @include borders($navbar-brand-border);
 
     .navbar-brand-minimized {
       display: none;
     }
+  }
+
+  button {
+    line-height: $navbar-height;
+
+    &:hover {
+      background-color: #e08e0b;
+    }
+  }
+
+  .sidebar-toggler::before {
+    float: left;
+	  /* stylelint-disable */
+    font-family: "Font Awesome 5 Pro";
+    content: "\f0c9";
+    background-color: transparent;
+    background-image: none;
   }
 
   .navbar-toggler {
@@ -40,6 +57,10 @@
   .navbar-nav {
     flex-direction: row;
     align-items: center;
+
+    ul {
+      list-style-type: none;
+    }    
   }
 
   .nav-item {

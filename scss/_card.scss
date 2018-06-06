@@ -1,5 +1,7 @@
 .card {
   margin-bottom: ($spacer * 1.5);
+  border-radius: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 
   // Cards with color accent
   @each $color, $value in $theme-colors {
@@ -45,6 +47,60 @@
       &.active {
         color: $body-color;
         background: #fff;
+      }
+    }
+  }
+
+  .card-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    //height: inherit;
+
+    a,
+    button {
+      display: block;
+      float: left;
+      width: 50px;
+      padding: $card-spacer-y 0;
+      margin: 0;
+      color: $body-color;
+      text-align: center;
+      background: transparent;
+      border: 0;
+      border-left: 1px solid $border-color;
+      box-shadow: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      [class^="icon-"],
+      [class*=" icon-"] {
+        display: inline-body;
+        vertical-align: middle;
+      }
+
+      i {
+        display: inline-body;
+        transition: .4s;
+      }
+
+      .r180 {
+        transform: rotate(180deg);
+      }
+    }
+
+    .input-group {
+      width: 230px;
+      margin: 6px;
+
+      .input-group-addon {
+        background: #fff;
+      }
+
+      input {
+        border-left: 0;
       }
     }
   }

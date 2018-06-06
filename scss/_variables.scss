@@ -66,7 +66,7 @@ $brands-colors: map-merge((
 // Navbar
 
 $navbar-height:                       55px !default;
-$navbar-bg:                           #fff !default;
+$navbar-bg:                           #f39c12 !default;
 $navbar-border: (
   bottom: (
     size:                             1px,
@@ -74,8 +74,8 @@ $navbar-border: (
     color:                            $border-color
   )
 )  !default;
-$navbar-brand-width:                  155px !default;
-$navbar-brand-bg:                     transparent !default;
+$navbar-brand-width:                  230px !default;
+$navbar-brand-bg:                     #e08e0b !default;
 $navbar-brand-border:                 0 !default;
 
 $navbar-brand-minimized-width:        50px !default;
@@ -92,7 +92,7 @@ $navbar-toggler-icon-hover:           str-replace(url("data:image/svg+xml;charse
 
 // Sidebar
 
-$sidebar-width:                       200px !default;
+$sidebar-width:                       230px !default;
 $sidebar-padding:                     0 !default;
 $sidebar-minimized-width:             50px !default;
 $sidebar-minimized-height:            $sidebar-minimized-width !default;
