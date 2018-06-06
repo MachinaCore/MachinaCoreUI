@@ -63,9 +63,9 @@
       VIEW_SCRIPT: '.view-script'
     };
     var Default = {
-      defaultPage: 'main.html',
-      errorPage: '404.html',
-      subpagesDirectory: 'views/'
+      defaultPage: 'views/main.html',
+      errorPage: 'views/404.html',
+      subpagesDirectory: ''
     };
 
     var AjaxLoad =
@@ -90,6 +90,10 @@
 
       // Public
       _proto.loadPage = function loadPage(url) {
+        if (typeof window.preparePage === 'function') {
+          window.preparePage();
+        }
+
         var element = this._element;
         var config = this._config;
 
@@ -125,10 +129,10 @@
           success: function success(result) {
             var wrapper = document.createElement('div');
             wrapper.innerHTML = result;
-            var scripts = Array.from(wrapper.querySelectorAll('script')).map(function (script) {
+            var scripts = Array.from(wrapper.querySelectorAll('script[src]')).map(function (script) {
               return script.attributes.getNamedItem('src').nodeValue;
             });
-            wrapper.querySelectorAll('script').forEach(function (script) {
+            wrapper.querySelectorAll('script[src]').forEach(function (script) {
               return script.parentNode.removeChild(script);
             });
             $$$1('body').animate({
@@ -151,8 +155,18 @@
       _proto.setUpUrl = function setUpUrl(url) {
         $$$1(Selector.NAV_LINK).removeClass(ClassName.ACTIVE);
         $$$1(Selector.NAV_DROPDOWN).removeClass(ClassName.OPEN);
-        $$$1(Selector.NAV_DROPDOWN + ":has(a[href=\"" + url.replace(/^\//, '').split('?')[0] + "\"])").addClass(ClassName.OPEN);
-        $$$1(Selector.NAV_ITEM + " a[href=\"" + url.replace(/^\//, '').split('?')[0] + "\"]").addClass(ClassName.ACTIVE);
+        $$$1(Selector.NAV_DROPDOWN + ":has(a[href=\"" + url.split('?')[0] + "\"])").addClass(ClassName.OPEN);
+        $$$1(Selector.NAV_ITEM + " a[href=\"" + url.split('?')[0] + "\"]").addClass(ClassName.ACTIVE); // Setup Breadcrumb
+
+        var menuName = '<li class="breadcrumb-item"><a href="/">Home</a></li>';
+        $$$1.menuElement = $$$1("$('nav .nav li:has(a[href=\"" + url.split('?')[0] + "\"])')");
+
+        if ($$$1.menuElement.parent().parent().hasClass('nav-dropdown open')) {
+          menuName += "<li class='breadcrumb-item'>" + $$$1.menuElement.parent().parent().find('span:first').text() + "</li>";
+        }
+
+        menuName += "<li class=\"breadcrumb-item active\">" + $$$1("nav .nav li:has(a[href=\"" + url.split('?')[0] + "\"])").find('.active').find('span').first().text() + "</li>";
+        $$$1('#breadcrumb').html(menuName);
         this.loadPage(url);
       };
 
