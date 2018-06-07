@@ -66,63 +66,59 @@ var AjaxLoad = function ($) {
       if (typeof window.preparePage === 'function') {
         window.preparePage();
       }
-
-      var element = this._element;
-      var config = this._config;
-
-      var loadScripts = function loadScripts(src, element) {
-        if (element === void 0) {
-          element = 0;
-        }
-
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = src[element];
-        script.className = ClassName.VIEW_SCRIPT; // eslint-disable-next-line no-multi-assign
-
+      /* const element = this._element
+      const config = this._config
+       const loadScripts = (src, element = 0) => {
+        const script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.src = src[element]
+        script.className = ClassName.VIEW_SCRIPT
+        // eslint-disable-next-line no-multi-assign
         script.onload = script.onreadystatechange = function () {
           if (!this.readyState || this.readyState === 'complete') {
             if (src.length > element + 1) {
-              loadScripts(src, element + 1);
+              loadScripts(src, element + 1)
             }
           }
-        };
-
-        var body = document.getElementsByTagName('body')[0];
-        body.appendChild(script);
-      };
-
-      $.ajax({
-        type: 'GET',
-        url: config.subpagesDirectory + url,
-        dataType: 'html',
-        beforeSend: function beforeSend() {
-          $(Selector.VIEW_SCRIPT).remove();
-        },
-        success: function success(result) {
-          var wrapper = document.createElement('div');
-          wrapper.innerHTML = result;
-          var scripts = Array.from(wrapper.querySelectorAll('script[src]')).map(function (script) {
-            return script.attributes.getNamedItem('src').nodeValue;
-          });
-          wrapper.querySelectorAll('script[src]').forEach(function (script) {
-            return script.parentNode.removeChild(script);
-          });
-          $('body').animate({
-            scrollTop: 0
-          }, 0);
-          $(element).html(wrapper);
-
-          if (scripts.length) {
-            loadScripts(scripts);
-          }
-
-          window.location.hash = url;
-        },
-        error: function error() {
-          window.location.href = config.errorPage;
         }
+        const body = document.getElementsByTagName('body')[0]
+        body.appendChild(script)
+      }
+      */
+
+
+      axios.get(this._config.subpagesDirectory + url).then(function (res) {
+        $('#ui-view').html(res.data);
+      }).catch(function (err) {
+        /* eslint-disable */
+        console.log(err);
+        /* eslint-enable */
       });
+      /* $.ajax({
+        type : 'GET',
+        url : config.subpagesDirectory + url,
+        dataType : 'html',
+        beforeSend() {
+          $(Selector.VIEW_SCRIPT).remove()
+        },
+        success(result) {
+          const wrapper = document.createElement('div')
+          wrapper.innerHTML = result
+           const scripts = Array.from(wrapper.querySelectorAll('script[src]')).map((script) => script.attributes.getNamedItem('src').nodeValue)
+           wrapper.querySelectorAll('script[src]').forEach((script) => script.parentNode.removeChild(script))
+           $('body').animate({
+            scrollTop: 0
+          }, 0)
+          $(element).html(wrapper)
+          if (scripts.length) {
+            loadScripts(scripts)
+          }
+          window.location.hash = url
+        },
+        error() {
+          window.location.href = config.errorPage
+        }
+      })*/
     };
 
     _proto.setUpUrl = function setUpUrl(url) {

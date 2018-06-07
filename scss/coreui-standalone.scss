@@ -24,6 +24,14 @@
 // Vendors
 @import "vendors";
 
+// Use MDB For buttons
+//@import "mdb/mixins";
+//@import "mdb/colors";
+//@import "mdb/variables";
+//@import "mdb/global";
+//@import "mdb/buttons";
+//@import "mdb/pagination";
+
 // Components
 @import "aside";
 @import "avatars";
@@ -50,6 +58,7 @@
 @import "switches";
 @import "tables";
 @import "widgets";
+@import "machinacore";
 
 // Layout Options
 @import "layout";

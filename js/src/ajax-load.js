@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import axios from 'axios'
 
 /**
  * --------------------------------------------------------------------------
@@ -78,7 +79,7 @@ const AjaxLoad = (($) => {
         window.preparePage()
       }
 
-      const element = this._element
+      /* const element = this._element
       const config = this._config
 
       const loadScripts = (src, element = 0) => {
@@ -97,8 +98,19 @@ const AjaxLoad = (($) => {
         const body = document.getElementsByTagName('body')[0]
         body.appendChild(script)
       }
+      */
 
-      $.ajax({
+      axios.get(this._config.subpagesDirectory + url)
+        .then((res) => {
+          $('#ui-view').html(res.data)
+        })
+        .catch((err) => {
+          /* eslint-disable */
+          console.log(err)
+          /* eslint-enable */
+        })
+
+      /* $.ajax({
         type : 'GET',
         url : config.subpagesDirectory + url,
         dataType : 'html',
@@ -125,7 +137,7 @@ const AjaxLoad = (($) => {
         error() {
           window.location.href = config.errorPage
         }
-      })
+      })*/
     }
 
     setUpUrl(url) {
