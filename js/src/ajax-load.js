@@ -103,12 +103,14 @@ const AjaxLoad = (($) => {
       axios.get(this._config.subpagesDirectory + url)
         .then((res) => {
           $('#ui-view').html(res.data)
+          window.location.hash = url
         })
+        /* eslint-disable */
         .catch((err) => {
-          /* eslint-disable */
-          console.log(err)
-          /* eslint-enable */
+          // console.log(err)
+          window.location.href = this._config.errorPage
         })
+        /* eslint-enable */
 
       /* $.ajax({
         type : 'GET',

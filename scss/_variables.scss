@@ -75,7 +75,7 @@ $navbar-border: (
   )
 )  !default;
 $navbar-brand-width:                  230px !default;
-$navbar-brand-bg:                     #e08e0b !default;
+$navbar-brand-bg:                     darken($primary,2%) !default;
 $navbar-brand-border:                 0 !default;
 
 $navbar-brand-minimized-width:        50px !default;

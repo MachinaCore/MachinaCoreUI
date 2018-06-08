@@ -91,6 +91,8 @@
 
       // Public
       _proto.loadPage = function loadPage(url) {
+        var _this = this;
+
         if (typeof window.preparePage === 'function') {
           window.preparePage();
         }
@@ -117,11 +119,15 @@
 
         axios.get(this._config.subpagesDirectory + url).then(function (res) {
           $$$1('#ui-view').html(res.data);
-        }).catch(function (err) {
-          /* eslint-disable */
-          console.log(err);
-          /* eslint-enable */
+          window.location.hash = url;
+        })
+        /* eslint-disable */
+        .catch(function (err) {
+          // console.log(err)
+          window.location.href = _this._config.errorPage;
         });
+        /* eslint-enable */
+
         /* $.ajax({
           type : 'GET',
           url : config.subpagesDirectory + url,
@@ -187,18 +193,18 @@
       };
 
       _proto._addEventListeners = function _addEventListeners() {
-        var _this = this;
+        var _this2 = this;
 
         $$$1(document).on(Event.CLICK, Selector.NAV_LINK + "[href!=\"#\"]", function (event) {
           event.preventDefault();
           event.stopPropagation();
 
           if (event.currentTarget.target === '_top') {
-            _this.loadTop(event.currentTarget.href);
+            _this2.loadTop(event.currentTarget.href);
           } else if (event.currentTarget.target === '_blank') {
-            _this.loadBlank(event.currentTarget.href);
+            _this2.loadBlank(event.currentTarget.href);
           } else {
-            _this.setUpUrl(event.currentTarget.getAttribute('href'));
+            _this2.setUpUrl(event.currentTarget.getAttribute('href'));
           }
         });
       }; // Static

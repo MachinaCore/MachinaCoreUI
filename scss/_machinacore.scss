@@ -1,6 +1,35 @@
 // Here you can add other styles
 /* stylelint-disable */
 
+.app-header.navbar button:hover {
+    background-color: darken($primary,2%);
+}
+
+.navbar-toggler {
+    font-size: 1.25rem;
+}
+	
+.app-header.navbar .nav-item a.nav-link,
+.app-header.navbar .nav-item a.dropdown-toggle {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+	
+.app-header.navbar .nav-item a.nav-link:hover,
+.app-header.navbar .nav-item a.dropdown-toggle:hover {
+    background-color: darken($primary,3%);
+    line-height: $navbar-height;
+}
+
+.app-header.navbar button {
+    line-height: $navbar-height;
+}
+
+.app-header.navbar .navbar-toggler {
+    padding: 0rem 0.75rem;
+    color: $navbar-color;
+}
+
 /* No Border radius */
 
 .form-control {

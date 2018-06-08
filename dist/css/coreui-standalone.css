@@ -2190,7 +2190,7 @@ canvas {
   height: 55px;
   padding: 0;
   margin-right: 0;
-  background-color: #e08e0b;
+  background-color: #d6880b;
 }
 
 .app-header .navbar-brand .navbar-brand-minimized {
@@ -2286,7 +2286,7 @@ canvas {
 @media (min-width: 992px) {
   .brand-minimized .app-header .navbar-brand {
     width: 50px;
-    background-color: #e08e0b;
+    background-color: #d6880b;
   }
   .brand-minimized .app-header .navbar-brand .navbar-brand-full {
     display: none;
@@ -3695,6 +3695,35 @@ table td {
 }
 
 /* stylelint-disable */
+.app-header.navbar button:hover {
+  background-color: #d6880b;
+}
+
+.navbar-toggler {
+  font-size: 1.25rem;
+}
+
+.app-header.navbar .nav-item a.nav-link,
+.app-header.navbar .nav-item a.dropdown-toggle {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.app-header.navbar .nav-item a.nav-link:hover,
+.app-header.navbar .nav-item a.dropdown-toggle:hover {
+  background-color: #d1850a;
+  line-height: 55px;
+}
+
+.app-header.navbar button {
+  line-height: 55px;
+}
+
+.app-header.navbar .navbar-toggler {
+  padding: 0rem 0.75rem;
+  color: #fff;
+}
+
 /* No Border radius */
 .form-control {
   border: 1px solid #c8ced3;
@@ -4411,133 +4440,133 @@ table.display tr:nth-child(even).yellowCell {
 
 @-webkit-keyframes anim-text-flow-keys {
   0% {
-    color: #5cd69d;
+    color: #97d65c;
   }
   5% {
-    color: #5c5cd6;
+    color: #93d65c;
   }
   10% {
-    color: #5ca9d6;
+    color: #d65c85;
   }
   15% {
-    color: #b15cd6;
+    color: #d6a75c;
   }
   20% {
-    color: #d65c5e;
+    color: #d65ca3;
   }
   25% {
-    color: #5c81d6;
+    color: #5cd6d0;
   }
   30% {
-    color: #5c6cd6;
+    color: #d6a75c;
   }
   35% {
-    color: #d6665c;
+    color: #d65cba;
   }
   40% {
-    color: #5c66d6;
+    color: #5cd6c6;
   }
   45% {
-    color: #d6625c;
+    color: #5ccad6;
   }
   50% {
-    color: #5cd68b;
+    color: #5c97d6;
   }
   55% {
-    color: #d68b5c;
+    color: #d65cce;
   }
   60% {
-    color: #5c74d6;
+    color: #d6a15c;
   }
   65% {
-    color: #d6815c;
+    color: #c45cd6;
   }
   70% {
-    color: #5cd683;
+    color: #7e5cd6;
   }
   75% {
-    color: #74d65c;
+    color: #78d65c;
   }
   80% {
-    color: #5e5cd6;
+    color: #b65cd6;
   }
   85% {
-    color: #5cbcd6;
+    color: #5ca3d6;
   }
   90% {
-    color: #5c6ed6;
+    color: #6c5cd6;
   }
   95% {
-    color: #d65c68;
+    color: #c2d65c;
   }
   100% {
-    color: #5cd6c6;
+    color: #78d65c;
   }
 }
 
 @keyframes anim-text-flow-keys {
   0% {
-    color: #5cd69d;
+    color: #97d65c;
   }
   5% {
-    color: #5c5cd6;
+    color: #93d65c;
   }
   10% {
-    color: #5ca9d6;
+    color: #d65c85;
   }
   15% {
-    color: #b15cd6;
+    color: #d6a75c;
   }
   20% {
-    color: #d65c5e;
+    color: #d65ca3;
   }
   25% {
-    color: #5c81d6;
+    color: #5cd6d0;
   }
   30% {
-    color: #5c6cd6;
+    color: #d6a75c;
   }
   35% {
-    color: #d6665c;
+    color: #d65cba;
   }
   40% {
-    color: #5c66d6;
+    color: #5cd6c6;
   }
   45% {
-    color: #d6625c;
+    color: #5ccad6;
   }
   50% {
-    color: #5cd68b;
+    color: #5c97d6;
   }
   55% {
-    color: #d68b5c;
+    color: #d65cce;
   }
   60% {
-    color: #5c74d6;
+    color: #d6a15c;
   }
   65% {
-    color: #d6815c;
+    color: #c45cd6;
   }
   70% {
-    color: #5cd683;
+    color: #7e5cd6;
   }
   75% {
-    color: #74d65c;
+    color: #78d65c;
   }
   80% {
-    color: #5e5cd6;
+    color: #b65cd6;
   }
   85% {
-    color: #5cbcd6;
+    color: #5ca3d6;
   }
   90% {
-    color: #5c6ed6;
+    color: #6c5cd6;
   }
   95% {
-    color: #d65c68;
+    color: #c2d65c;
   }
   100% {
-    color: #5cd6c6;
+    color: #78d65c;
   }
 }
 
@@ -6200,7 +6229,7 @@ html[dir="rtl"] .aside-menu-show .aside-menu {
     z-index: 1020;
     width: 100%;
     text-align: center;
-    background-color: #e08e0b;
+    background-color: #d6880b;
   }
   .app-header .navbar-toggler {
     color: #fff;

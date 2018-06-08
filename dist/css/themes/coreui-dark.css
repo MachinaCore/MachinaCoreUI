@@ -10620,7 +10620,7 @@ canvas {
   height: 55px;
   padding: 0;
   margin-right: 0;
-  background-color: #e08e0b;
+  background-color: #eec300;
 }
 
 .app-header .navbar-brand .navbar-brand-minimized {
@@ -10714,7 +10714,7 @@ canvas {
 @media (min-width: 992px) {
   .brand-minimized .app-header .navbar-brand {
     width: 50px;
-    background-color: #e08e0b;
+    background-color: #eec300;
   }
   .brand-minimized .app-header .navbar-brand .navbar-brand-full {
     display: none;
@@ -12130,6 +12130,35 @@ table td {
 }
 
 /* stylelint-disable */
+.app-header.navbar button:hover {
+  background-color: #eec300;
+}
+
+.navbar-toggler {
+  font-size: 1.25rem;
+}
+
+.app-header.navbar .nav-item a.nav-link,
+.app-header.navbar .nav-item a.dropdown-toggle {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.app-header.navbar .nav-item a.nav-link:hover,
+.app-header.navbar .nav-item a.dropdown-toggle:hover {
+  background-color: #e9be00;
+  line-height: 55px;
+}
+
+.app-header.navbar button {
+  line-height: 55px;
+}
+
+.app-header.navbar .navbar-toggler {
+  padding: 0rem 0.75rem;
+  color: #c8ced3;
+}
+
 /* No Border radius */
 .form-control {
   border: 1px solid #23282c;
@@ -12831,67 +12860,67 @@ table.display tr:nth-child(even).yellowCell {
 
 @keyframes anim-text-flow-keys {
   0% {
-    color: #d6975c;
+    color: #5cd660;
   }
   5% {
-    color: #5cd66e;
+    color: #7c5cd6;
   }
   10% {
-    color: #d65c87;
+    color: #5ca7d6;
   }
   15% {
-    color: #d65ca3;
+    color: #5c97d6;
   }
   20% {
-    color: #975cd6;
+    color: #d65cce;
   }
   25% {
-    color: #6ed65c;
+    color: #855cd6;
   }
   30% {
-    color: #5c60d6;
+    color: #5cd6b6;
   }
   35% {
-    color: #d65c91;
+    color: #d6d45c;
   }
   40% {
-    color: #d65cd0;
+    color: #d6a95c;
   }
   45% {
-    color: #7a5cd6;
+    color: #5cd6c8;
   }
   50% {
-    color: #a75cd6;
+    color: #d67c5c;
   }
   55% {
-    color: #5cd6c2;
+    color: #d6d25c;
   }
   60% {
-    color: #64d65c;
+    color: #5cb6d6;
   }
   65% {
-    color: #d6c45c;
+    color: #b85cd6;
   }
   70% {
-    color: #d25cd6;
-  }
-  75% {
-    color: #5cd672;
-  }
-  80% {
-    color: #d66c5c;
-  }
-  85% {
     color: #d65cad;
   }
+  75% {
+    color: #95d65c;
+  }
+  80% {
+    color: #705cd6;
+  }
+  85% {
+    color: #5c64d6;
+  }
   90% {
-    color: #d6665c;
+    color: #d0d65c;
   }
   95% {
-    color: #bed65c;
+    color: #d65ca9;
   }
   100% {
-    color: #d68d5c;
+    color: #d65cbe;
   }
 }
 
@@ -14368,7 +14397,7 @@ html[dir="rtl"] .aside-menu-show .aside-menu {
     z-index: 1020;
     width: 100%;
     text-align: center;
-    background-color: #e08e0b;
+    background-color: #eec300;
   }
   .app-header .navbar-toggler {
     color: #c8ced3;
