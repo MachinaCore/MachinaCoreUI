@@ -12739,6 +12739,25 @@ table td {
 }
 
 /* stylelint-disable */
+/* For e.g. eclect2 in header */
+.card-actions .action {
+  float: right;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  line-height: 45px;
+  border-left: 1px solid #c8ced3;
+  width: initial;
+  padding-right: 10px;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
 .app-header.navbar button:hover {
   background-color: #d6880b;
 }
@@ -13485,133 +13504,133 @@ table.display tr:nth-child(even).yellowCell {
 
 @-webkit-keyframes anim-text-flow-keys {
   0% {
-    color: #5cd689;
+    color: #afd65c;
   }
   5% {
-    color: #d65c81;
+    color: #d6af5c;
   }
   10% {
-    color: #5cd6a1;
+    color: #5cd6c8;
   }
   15% {
-    color: #d6785c;
+    color: #d6605c;
   }
   20% {
-    color: #5c78d6;
+    color: #7cd65c;
   }
   25% {
-    color: #cad65c;
+    color: #7cd65c;
   }
   30% {
-    color: #d6b45c;
+    color: #c65cd6;
   }
   35% {
-    color: #d2d65c;
+    color: #b1d65c;
   }
   40% {
-    color: #5c85d6;
+    color: #5cd6bc;
   }
   45% {
-    color: #d65c72;
+    color: #5cd6a1;
   }
   50% {
-    color: #afd65c;
+    color: #add65c;
   }
   55% {
-    color: #5cd6ca;
+    color: #a9d65c;
   }
   60% {
-    color: #5cd6c2;
+    color: #d6955c;
   }
   65% {
-    color: #d6ce5c;
+    color: #d65c8f;
   }
   70% {
-    color: #9d5cd6;
+    color: #5cc0d6;
   }
   75% {
-    color: #d65c9d;
+    color: #5cd674;
   }
   80% {
-    color: #d65c8d;
+    color: #d65ca3;
   }
   85% {
-    color: #6a5cd6;
+    color: #6ad65c;
   }
   90% {
-    color: #a7d65c;
+    color: #d65c6e;
   }
   95% {
-    color: #665cd6;
+    color: #d6915c;
   }
   100% {
-    color: #afd65c;
+    color: #d65cc0;
   }
 }
 
 @keyframes anim-text-flow-keys {
   0% {
-    color: #5cd689;
+    color: #afd65c;
   }
   5% {
-    color: #d65c81;
+    color: #d6af5c;
   }
   10% {
-    color: #5cd6a1;
+    color: #5cd6c8;
   }
   15% {
-    color: #d6785c;
+    color: #d6605c;
   }
   20% {
-    color: #5c78d6;
+    color: #7cd65c;
   }
   25% {
-    color: #cad65c;
+    color: #7cd65c;
   }
   30% {
-    color: #d6b45c;
+    color: #c65cd6;
   }
   35% {
-    color: #d2d65c;
+    color: #b1d65c;
   }
   40% {
-    color: #5c85d6;
+    color: #5cd6bc;
   }
   45% {
-    color: #d65c72;
+    color: #5cd6a1;
   }
   50% {
-    color: #afd65c;
+    color: #add65c;
   }
   55% {
-    color: #5cd6ca;
+    color: #a9d65c;
   }
   60% {
-    color: #5cd6c2;
+    color: #d6955c;
   }
   65% {
-    color: #d6ce5c;
+    color: #d65c8f;
   }
   70% {
-    color: #9d5cd6;
+    color: #5cc0d6;
   }
   75% {
-    color: #d65c9d;
+    color: #5cd674;
   }
   80% {
-    color: #d65c8d;
+    color: #d65ca3;
   }
   85% {
-    color: #6a5cd6;
+    color: #6ad65c;
   }
   90% {
-    color: #a7d65c;
+    color: #d65c6e;
   }
   95% {
-    color: #665cd6;
+    color: #d6915c;
   }
   100% {
-    color: #afd65c;
+    color: #d65cc0;
   }
 }
 

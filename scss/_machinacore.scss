@@ -1,6 +1,21 @@
 // Here you can add other styles
 /* stylelint-disable */
 
+/* For e.g. eclect2 in header */
+.card-actions .action {
+	float: right;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	line-height: 45px;
+	border-left: 1px solid $border-color;
+	width: initial;
+	padding-right: 10px;
+	padding-left: 10px;
+	white-space: nowrap;
+}
+
 .app-header.navbar button:hover {
     background-color: darken($primary,2%);
 }

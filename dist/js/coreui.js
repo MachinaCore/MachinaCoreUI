@@ -93,8 +93,8 @@
       _proto.loadPage = function loadPage(url) {
         var _this = this;
 
-        if (typeof window.preparePage === 'function') {
-          window.preparePage();
+        if (typeof window.beforeHook === 'function') {
+          window.beforeHook();
         }
         /* const element = this._element
         const config = this._config
@@ -120,6 +120,10 @@
         axios.get(this._config.subpagesDirectory + url).then(function (res) {
           $$$1('#ui-view').html(res.data);
           window.location.hash = url;
+
+          if (typeof window.afterHook === 'function') {
+            window.afterHook();
+          }
         })
         /* eslint-disable */
         .catch(function (err) {

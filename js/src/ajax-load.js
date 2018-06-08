@@ -75,8 +75,8 @@ const AjaxLoad = (($) => {
     // Public
 
     loadPage(url) {
-      if (typeof window.preparePage === 'function') {
-        window.preparePage()
+      if (typeof window.beforeHook === 'function') {
+        window.beforeHook()
       }
 
       /* const element = this._element
@@ -104,6 +104,9 @@ const AjaxLoad = (($) => {
         .then((res) => {
           $('#ui-view').html(res.data)
           window.location.hash = url
+          if (typeof window.afterHook === 'function') {
+            window.afterHook()
+          }
         })
         /* eslint-disable */
         .catch((err) => {
