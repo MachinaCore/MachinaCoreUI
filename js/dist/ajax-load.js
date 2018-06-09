@@ -36,8 +36,8 @@ var AjaxLoad = function ($) {
     VIEW_SCRIPT: '.view-script'
   };
   var Default = {
-    defaultPage: 'views/main.html',
-    errorPage: 'views/404.html',
+    defaultPage: 'pages/Dashboard.html',
+    errorPage: 'pages/404.html',
     subpagesDirectory: ''
   };
 
@@ -68,30 +68,19 @@ var AjaxLoad = function ($) {
       if (typeof window.beforeHook === 'function') {
         window.beforeHook();
       }
-      /* const element = this._element
-      const config = this._config
-       const loadScripts = (src, element = 0) => {
-        const script = document.createElement('script')
-        script.type = 'text/javascript'
-        script.src = src[element]
-        script.className = ClassName.VIEW_SCRIPT
-        // eslint-disable-next-line no-multi-assign
-        script.onload = script.onreadystatechange = function () {
-          if (!this.readyState || this.readyState === 'complete') {
-            if (src.length > element + 1) {
-              loadScripts(src, element + 1)
-            }
-          }
+      /* const config = {
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control' : 'no-cache'
         }
-        const body = document.getElementsByTagName('body')[0]
-        body.appendChild(script)
       }
+      axios.get(this._config.subpagesDirectory + url, config)
       */
 
 
+      window.location.hash = url;
       axios.get(this._config.subpagesDirectory + url).then(function (res) {
         $('#ui-view').html(res.data);
-        window.location.hash = url;
 
         if (typeof window.afterHook === 'function') {
           window.afterHook();
@@ -99,36 +88,18 @@ var AjaxLoad = function ($) {
       })
       /* eslint-disable */
       .catch(function (err) {
-        // console.log(err)
-        window.location.href = _this._config.errorPage;
+        axios.get(_this._config.errorPage).then(function (res) {
+          $('#ui-view').html(res.data);
+
+          if (typeof window.afterHook === 'function') {
+            window.afterHook();
+          }
+        }).catch(function (err) {
+          // console.log(err)
+          window.location.href = _this._config.errorPage;
+        });
       });
       /* eslint-enable */
-
-      /* $.ajax({
-        type : 'GET',
-        url : config.subpagesDirectory + url,
-        dataType : 'html',
-        beforeSend() {
-          $(Selector.VIEW_SCRIPT).remove()
-        },
-        success(result) {
-          const wrapper = document.createElement('div')
-          wrapper.innerHTML = result
-           const scripts = Array.from(wrapper.querySelectorAll('script[src]')).map((script) => script.attributes.getNamedItem('src').nodeValue)
-           wrapper.querySelectorAll('script[src]').forEach((script) => script.parentNode.removeChild(script))
-           $('body').animate({
-            scrollTop: 0
-          }, 0)
-          $(element).html(wrapper)
-          if (scripts.length) {
-            loadScripts(scripts)
-          }
-          window.location.hash = url
-        },
-        error() {
-          window.location.href = config.errorPage
-        }
-      })*/
     };
 
     _proto.setUpUrl = function setUpUrl(url) {
@@ -171,6 +142,12 @@ var AjaxLoad = function ($) {
     _proto._addEventListeners = function _addEventListeners() {
       var _this2 = this;
 
+      $(document).on(Event.CLICK, '.ajaxLink', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        _this2.loadPage(event.currentTarget.getAttribute('href'));
+      });
       $(document).on(Event.CLICK, Selector.NAV_LINK + "[href!=\"#\"]", function (event) {
         event.preventDefault();
         event.stopPropagation();

@@ -12157,6 +12157,7 @@ table td {
 .app-header.navbar .nav-item a.dropdown-toggle {
   padding-left: 15px;
   padding-right: 15px;
+  line-height: 55px;
 }
 
 .app-header.navbar .nav-item a.nav-link:hover,
@@ -12875,67 +12876,67 @@ table.display tr:nth-child(even).yellowCell {
 
 @keyframes anim-text-flow-keys {
   0% {
-    color: #d2d65c;
+    color: #d6835c;
   }
   5% {
-    color: #b85cd6;
+    color: #9d5cd6;
   }
   10% {
-    color: #5cd6ab;
+    color: #d6895c;
   }
   15% {
-    color: #5c97d6;
+    color: #5c6ed6;
   }
   20% {
-    color: #bed65c;
+    color: #74d65c;
   }
   25% {
-    color: #d65cd4;
+    color: #5c85d6;
   }
   30% {
-    color: #b65cd6;
+    color: #68d65c;
   }
   35% {
-    color: #5c72d6;
+    color: #d65c8b;
   }
   40% {
-    color: #d65c72;
+    color: #5cd65c;
   }
   45% {
-    color: #85d65c;
+    color: #d65ca5;
   }
   50% {
-    color: #5c60d6;
+    color: #a1d65c;
   }
   55% {
-    color: #d6995c;
+    color: #6ad65c;
   }
   60% {
-    color: #b85cd6;
+    color: #d65cd0;
   }
   65% {
-    color: #5c6cd6;
-  }
-  70% {
-    color: #78d65c;
-  }
-  75% {
-    color: #5cd6ab;
-  }
-  80% {
-    color: #5cd660;
-  }
-  85% {
-    color: #5c76d6;
-  }
-  90% {
-    color: #5cd6ba;
-  }
-  95% {
     color: #95d65c;
   }
+  70% {
+    color: #d65c64;
+  }
+  75% {
+    color: #5cd6b4;
+  }
+  80% {
+    color: #5c78d6;
+  }
+  85% {
+    color: #5ccad6;
+  }
+  90% {
+    color: #ab5cd6;
+  }
+  95% {
+    color: #5ccad6;
+  }
   100% {
-    color: #c0d65c;
+    color: #855cd6;
   }
 }
 
