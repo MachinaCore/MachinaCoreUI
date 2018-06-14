@@ -36,8 +36,8 @@ var AjaxLoad = function ($) {
     VIEW_SCRIPT: '.view-script'
   };
   var Default = {
-    defaultPage: 'pages/Dashboard.html',
-    errorPage: 'pages/404.html',
+    defaultPage: 'views/main.html',
+    errorPage: 'views/404.html',
     subpagesDirectory: ''
   };
 
@@ -51,7 +51,7 @@ var AjaxLoad = function ($) {
 
       if (url !== '') {
         this.setUpUrl(url);
-      } else {
+      } else if ($('#ui-view').html() === '') {
         this.setUpUrl(this._config.defaultPage);
       }
 
@@ -63,43 +63,42 @@ var AjaxLoad = function ($) {
 
     // Public
     _proto.loadPage = function loadPage(url) {
-      var _this = this;
+      var config = this._config;
 
       if (typeof window.beforeHook === 'function') {
         window.beforeHook();
       }
-      /* const config = {
-        headers: {
-          'Content-Type': 'application/json',
-          'Cache-Control' : 'no-cache'
-        }
-      }
-      axios.get(this._config.subpagesDirectory + url, config)
-      */
 
-
-      window.location.hash = url;
-      axios.get(this._config.subpagesDirectory + url).then(function (res) {
-        $('#ui-view').html(res.data);
-
-        if (typeof window.afterHook === 'function') {
-          window.afterHook();
-        }
-      })
-      /* eslint-disable */
-      .catch(function (err) {
-        axios.get(_this._config.errorPage).then(function (res) {
-          $('#ui-view').html(res.data);
+      window.location.hash = url.replace('/#/', '/');
+      $.ajax({
+        type: 'GET',
+        url: config.subpagesDirectory + url.replace('/#/', '/'),
+        dataType: 'html',
+        success: function success(result) {
+          $('#ui-view').html(result);
 
           if (typeof window.afterHook === 'function') {
             window.afterHook();
           }
-        }).catch(function (err) {
-          // console.log(err)
-          window.location.href = _this._config.errorPage;
-        });
+        },
+        error: function error() {
+          $.ajax({
+            type: 'GET',
+            url: config.errorPage,
+            dataType: 'html',
+            success: function success(result) {
+              $('#ui-view').html(result);
+
+              if (typeof window.afterHook === 'function') {
+                window.afterHook();
+              }
+            },
+            error: function error() {
+              window.location.href = config.errorPage;
+            }
+          });
+        }
       });
-      /* eslint-enable */
     };
 
     _proto.setUpUrl = function setUpUrl(url) {
@@ -140,24 +139,21 @@ var AjaxLoad = function ($) {
     };
 
     _proto._addEventListeners = function _addEventListeners() {
-      var _this2 = this;
+      var _this = this;
 
-      $(document).on(Event.CLICK, '.ajaxLink', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
+      $(document).on(Event.CLICK, '[href]', function (event) {
+        // console.log($(this).attr('href'))
+        if (event.currentTarget.getAttribute('href').startsWith('/#/')) {
+          event.preventDefault();
+          event.stopPropagation(); // console.log("ajax")
 
-        _this2.loadPage(event.currentTarget.getAttribute('href'));
-      });
-      $(document).on(Event.CLICK, Selector.NAV_LINK + "[href!=\"#\"]", function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-
-        if (event.currentTarget.target === '_top') {
-          _this2.loadTop(event.currentTarget.href);
-        } else if (event.currentTarget.target === '_blank') {
-          _this2.loadBlank(event.currentTarget.href);
-        } else {
-          _this2.setUpUrl(event.currentTarget.getAttribute('href'));
+          if (event.currentTarget.target === '_top') {
+            _this.loadTop(event.currentTarget.href);
+          } else if (event.currentTarget.target === '_blank') {
+            _this.loadBlank(event.currentTarget.href);
+          } else {
+            _this.setUpUrl(event.currentTarget.getAttribute('href'));
+          }
         }
       });
     }; // Static

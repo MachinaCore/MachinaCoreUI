@@ -1,5 +1,4 @@
 import $ from 'jquery'
-import axios from 'axios'
 
 /**
  * --------------------------------------------------------------------------
@@ -42,8 +41,8 @@ const AjaxLoad = (($) => {
   }
 
   const Default = {
-    defaultPage       : 'pages/Dashboard.html',
-    errorPage         : 'pages/404.html',
+    defaultPage       : 'views/main.html',
+    errorPage         : 'views/404.html',
     subpagesDirectory : ''
   }
 
@@ -56,7 +55,7 @@ const AjaxLoad = (($) => {
 
       if (url !== '') {
         this.setUpUrl(url)
-      } else {
+      } else if ($('#ui-view').html() === '') {
         this.setUpUrl(this._config.defaultPage)
       }
       this._addEventListeners()
@@ -73,45 +72,41 @@ const AjaxLoad = (($) => {
     }
 
     // Public
-
     loadPage(url) {
+      const config = this._config
+
       if (typeof window.beforeHook === 'function') {
         window.beforeHook()
       }
 
-      /* const config = {
-        headers: {
-          'Content-Type': 'application/json',
-          'Cache-Control' : 'no-cache'
-        }
-      }
-      axios.get(this._config.subpagesDirectory + url, config)
-      */
-
-      window.location.hash = url
-      axios.get(this._config.subpagesDirectory + url)
-        .then((res) => {
-          $('#ui-view').html(res.data)
-
+      window.location.hash = url.replace('/#/', '/')
+      $.ajax({
+        type : 'GET',
+        url : config.subpagesDirectory + url.replace('/#/', '/'),
+        dataType : 'html',
+        success(result) {
+          $('#ui-view').html(result)
           if (typeof window.afterHook === 'function') {
             window.afterHook()
           }
-        })
-        /* eslint-disable */
-        .catch((err) => {
-          axios.get(this._config.errorPage)
-          .then((res) => {
-            $('#ui-view').html(res.data)
-            if (typeof window.afterHook === 'function') {
-              window.afterHook()
+        },
+        error() {
+          $.ajax({
+            type : 'GET',
+            url : config.errorPage,
+            dataType : 'html',
+            success(result) {
+              $('#ui-view').html(result)
+              if (typeof window.afterHook === 'function') {
+                window.afterHook()
+              }
+            },
+            error() {
+              window.location.href = config.errorPage
             }
           })
-          .catch((err) => {
-            // console.log(err)
-            window.location.href = this._config.errorPage
-          })          
-        })
-        /* eslint-enable */
+        }
+      })
     }
 
     setUpUrl(url) {
@@ -155,22 +150,19 @@ const AjaxLoad = (($) => {
     }
 
     _addEventListeners() {
-      $(document).on(Event.CLICK, '.ajaxLink', (event) => {
-        event.preventDefault()
-        event.stopPropagation()
-        this.loadPage(event.currentTarget.getAttribute('href'))
-      })
-
-      $(document).on(Event.CLICK, `${Selector.NAV_LINK}[href!="#"]`, (event) => {
-        event.preventDefault()
-        event.stopPropagation()
-
-        if (event.currentTarget.target === '_top') {
-          this.loadTop(event.currentTarget.href)
-        } else if (event.currentTarget.target === '_blank') {
-          this.loadBlank(event.currentTarget.href)
-        } else {
-          this.setUpUrl(event.currentTarget.getAttribute('href'))
+      $(document).on(Event.CLICK, '[href]', (event) => {
+        // console.log($(this).attr('href'))
+        if (event.currentTarget.getAttribute('href').startsWith('/#/')) {
+          event.preventDefault()
+          event.stopPropagation()
+          // console.log("ajax")
+          if (event.currentTarget.target === '_top') {
+            this.loadTop(event.currentTarget.href)
+          } else if (event.currentTarget.target === '_blank') {
+            this.loadBlank(event.currentTarget.href)
+          } else {
+            this.setUpUrl(event.currentTarget.getAttribute('href'))
+          }
         }
       })
     }
