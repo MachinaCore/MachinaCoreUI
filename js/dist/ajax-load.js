@@ -36,8 +36,8 @@ var AjaxLoad = function ($) {
     VIEW_SCRIPT: '.view-script'
   };
   var Default = {
-    defaultPage: 'views/main.html',
-    errorPage: 'views/404.html',
+    defaultPage: 'pages/main.html',
+    errorPage: 'pages/404.html',
     subpagesDirectory: ''
   };
 
