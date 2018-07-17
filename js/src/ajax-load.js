@@ -41,8 +41,8 @@ const AjaxLoad = (($) => {
   }
 
   const Default = {
-    defaultPage       : 'pages/main.html',
-    errorPage         : 'pages/404.html',
+    defaultPage       : 'views/main.html',
+    errorPage         : 'views/404.html',
     subpagesDirectory : ''
   }
 
