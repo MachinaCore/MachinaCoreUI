@@ -12880,67 +12880,67 @@ table.display tr:nth-child(even).yellowCell {
 
 @keyframes anim-text-flow-keys {
   0% {
-    color: #c05cd6;
+    color: #d6745c;
   }
   5% {
-    color: #d65cbc;
+    color: #d65cb1;
   }
   10% {
-    color: #d65cbc;
+    color: #d65cc6;
   }
   15% {
-    color: #ccd65c;
+    color: #5cd68b;
   }
   20% {
-    color: #5cd66a;
+    color: #5c97d6;
   }
   25% {
-    color: #93d65c;
+    color: #9d5cd6;
   }
   30% {
-    color: #d6625c;
+    color: #975cd6;
   }
   35% {
-    color: #b15cd6;
+    color: #bed65c;
   }
   40% {
-    color: #9bd65c;
+    color: #5cb6d6;
   }
   45% {
-    color: #d65c64;
+    color: #c25cd6;
   }
   50% {
-    color: #d65c83;
+    color: #cc5cd6;
   }
   55% {
-    color: #5cd695;
+    color: #5cb8d6;
   }
   60% {
-    color: #d6855c;
+    color: #5cd6a9;
   }
   65% {
-    color: #5cd6d6;
+    color: #d6ba5c;
   }
   70% {
-    color: #835cd6;
-  }
-  75% {
-    color: #d6b45c;
-  }
-  80% {
-    color: #5cd693;
-  }
-  85% {
     color: #9fd65c;
   }
+  75% {
+    color: #d6605c;
+  }
+  80% {
+    color: #d65cbe;
+  }
+  85% {
+    color: #d65c70;
+  }
   90% {
-    color: #d65c85;
+    color: #d6c25c;
   }
   95% {
-    color: #d65cd0;
+    color: #5cd676;
   }
   100% {
-    color: #c05cd6;
+    color: #7ed65c;
   }
 }
 

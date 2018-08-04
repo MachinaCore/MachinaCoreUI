@@ -1,7 +1,7 @@
 /*!
-  * CoreUI v2.0.3 (https://coreui.io/pro/)
-  * Copyright 2018 Łukasz Holeczek
-  * Licensed under MIT (https://coreui.io/pro/)
+  * CoreUI v2.0.3 (https://github.com/MachinaCore/MachinaCoreUI)
+  * Copyright 2018 Thiemo Borger
+  * Licensed under MIT (https://github.com/MachinaCore/MachinaCoreUI)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
