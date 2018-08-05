@@ -1,5 +1,5 @@
 /*!
-  * CoreUI Pro v2.0.3 (https://github.com/MachinaCore/MachinaCoreUI)
+  * MachinaCoreUI Pro v2.0.3 (https://github.com/MachinaCore/MachinaCoreUI)
   * Copyright 2018 Thiemo Borger
   * Licensed under MIT (https://github.com/MachinaCore/MachinaCoreUI)
   */
@@ -30,8 +30,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.3): ajax-load.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI (v2.0.3): ajax-load.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
 
@@ -233,8 +233,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.3): toggle-classes.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI (v2.0.3): toggle-classes.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
   var removeClasses = function removeClasses(classNames) {
@@ -258,8 +258,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.3): aside-menu.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI (v2.0.3): aside-menu.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
 
@@ -367,8 +367,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.3): sidebar.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI (v2.0.3): sidebar.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
 
@@ -569,8 +569,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.0.3): get-style.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI Utilities (v2.0.3): get-style.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
   var getCssCustomProperties = function getCssCustomProperties() {
@@ -636,8 +636,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.0.3): hex-to-rgb.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI Utilities (v2.0.3): hex-to-rgb.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
 
@@ -672,8 +672,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.0.3): hex-to-rgba.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI Utilities (v2.0.3): hex-to-rgba.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
 
@@ -712,8 +712,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.3): rgb-to-hex.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI (v2.0.3): rgb-to-hex.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
 
@@ -737,14 +737,14 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.3): index.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI (v2.0.3): index.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
 
   (function ($$$1) {
     if (typeof $$$1 === 'undefined') {
-      throw new TypeError('CoreUI\'s JavaScript requires jQuery. jQuery must be included before CoreUI\'s JavaScript.');
+      throw new TypeError('MachinaCoreUI\'s JavaScript requires jQuery. jQuery must be included before MachinaCoreUI\'s JavaScript.');
     }
 
     var version = $$$1.fn.jquery.split(' ')[0].split('.');
@@ -755,7 +755,7 @@
     var maxMajor = 4;
 
     if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
-      throw new Error('CoreUI\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
+      throw new Error('MachinaCoreUI\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
     }
   })($);
   window.getStyle = getStyle;

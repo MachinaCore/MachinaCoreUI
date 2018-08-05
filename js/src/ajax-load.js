@@ -2,8 +2,8 @@ import $ from 'jquery'
 
 /**
  * --------------------------------------------------------------------------
- * CoreUI (v2.0.3): ajax-load.js
- * Licensed under MIT (https://coreui.io/license)
+ * MachinaCoreUI (v2.0.3): ajax-load.js
+ * Licensed under MIT
  * --------------------------------------------------------------------------
  */
 

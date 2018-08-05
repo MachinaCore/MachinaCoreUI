@@ -32,7 +32,7 @@ export default {
   input: path.resolve(__dirname, '../js/src/utilities/index.js'),
   output: {
     banner: `/*!
-  * CoreUI v${pkg.version} (${pkg.homepage})
+  * MachinaCoreUI v${pkg.version} (${pkg.homepage})
   * Copyright ${year} ${pkg.author.name}
   * Licensed under MIT (${pkg.homepage})
   */`,

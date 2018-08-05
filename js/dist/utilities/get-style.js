@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------------------------------------
- * CoreUI Utilities (v2.0.3): get-style.js
- * Licensed under MIT (https://coreui.io/license)
+ * MachinaCoreUI Utilities (v2.0.3): get-style.js
+ * Licensed under MIT
  * --------------------------------------------------------------------------
  */
 var getCssCustomProperties = function getCssCustomProperties() {

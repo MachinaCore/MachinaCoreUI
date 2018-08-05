@@ -4,8 +4,8 @@ import toggleClasses from './toggle-classes'
 
 /**
  * --------------------------------------------------------------------------
- * CoreUI (v2.0.3): sidebar.js
- * Licensed under MIT (https://coreui.io/license)
+ * MachinaCoreUI (v2.0.3): sidebar.js
+ * Licensed under MIT
  * --------------------------------------------------------------------------
  */
 

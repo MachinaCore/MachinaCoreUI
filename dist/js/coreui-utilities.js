@@ -1,5 +1,5 @@
 /*!
-  * CoreUI v2.0.3 (https://github.com/MachinaCore/MachinaCoreUI)
+  * MachinaCoreUI v2.0.3 (https://github.com/MachinaCore/MachinaCoreUI)
   * Copyright 2018 Thiemo Borger
   * Licensed under MIT (https://github.com/MachinaCore/MachinaCoreUI)
   */
@@ -11,8 +11,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.0.3): get-style.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI Utilities (v2.0.3): get-style.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
   var getCssCustomProperties = function getCssCustomProperties() {
@@ -78,8 +78,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.0.3): hex-to-rgb.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI Utilities (v2.0.3): hex-to-rgb.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
 
@@ -114,8 +114,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.0.3): hex-to-rgba.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI Utilities (v2.0.3): hex-to-rgba.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
 
@@ -154,8 +154,8 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.3): rgb-to-hex.js
-   * Licensed under MIT (https://coreui.io/license)
+   * MachinaCoreUI (v2.0.3): rgb-to-hex.js
+   * Licensed under MIT
    * --------------------------------------------------------------------------
    */
 

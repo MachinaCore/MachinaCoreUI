@@ -1,10 +1,6 @@
-@charset "UTF-8";
 /*!
- * CoreUI Pro - Dashboard UI Kit
+ * MachinaCoreUI
  * @version v2.0.3
- * @link https://coreui.io/pro/
- * Copyright (c) 2018 creativeLabs Łukasz Holeczek
- * Licensed under MIT (https://coreui.io/license)
  */
 .animated {
   -webkit-animation-duration: 1s;
@@ -4464,133 +4460,133 @@ table.display tr:nth-child(even).yellowCell {
 
 @-webkit-keyframes anim-text-flow-keys {
   0% {
-    color: #5c91d6;
+    color: #5cc6d6;
   }
   5% {
-    color: #6ed65c;
-  }
-  10% {
-    color: #d65c9b;
-  }
-  15% {
-    color: #d66a5c;
-  }
-  20% {
-    color: #d65c95;
-  }
-  25% {
-    color: #d65c85;
-  }
-  30% {
-    color: #64d65c;
-  }
-  35% {
-    color: #875cd6;
-  }
-  40% {
-    color: #5cd66e;
-  }
-  45% {
-    color: #5cc8d6;
-  }
-  50% {
-    color: #5c81d6;
-  }
-  55% {
     color: #a3d65c;
   }
+  10% {
+    color: #5cd67c;
+  }
+  15% {
+    color: #d68d5c;
+  }
+  20% {
+    color: #5c85d6;
+  }
+  25% {
+    color: #5cd6c0;
+  }
+  30% {
+    color: #ce5cd6;
+  }
+  35% {
+    color: #d6875c;
+  }
+  40% {
+    color: #5cd6ce;
+  }
+  45% {
+    color: #d65c95;
+  }
+  50% {
+    color: #d65ca3;
+  }
+  55% {
+    color: #d6605c;
+  }
   60% {
-    color: #5c76d6;
+    color: #d6625c;
   }
   65% {
-    color: #d67e5c;
+    color: #a75cd6;
   }
   70% {
-    color: #5cb4d6;
+    color: #5cd4d6;
   }
   75% {
-    color: #8d5cd6;
+    color: #c05cd6;
   }
   80% {
-    color: #5cd6b8;
+    color: #d65c70;
   }
   85% {
-    color: #d65c62;
+    color: #8dd65c;
   }
   90% {
-    color: #5cd6d0;
+    color: #915cd6;
   }
   95% {
-    color: #5c68d6;
+    color: #d6b65c;
   }
   100% {
-    color: #5ed65c;
+    color: #68d65c;
   }
 }
 
 @keyframes anim-text-flow-keys {
   0% {
-    color: #5c91d6;
+    color: #5cc6d6;
   }
   5% {
-    color: #6ed65c;
-  }
-  10% {
-    color: #d65c9b;
-  }
-  15% {
-    color: #d66a5c;
-  }
-  20% {
-    color: #d65c95;
-  }
-  25% {
-    color: #d65c85;
-  }
-  30% {
-    color: #64d65c;
-  }
-  35% {
-    color: #875cd6;
-  }
-  40% {
-    color: #5cd66e;
-  }
-  45% {
-    color: #5cc8d6;
-  }
-  50% {
-    color: #5c81d6;
-  }
-  55% {
     color: #a3d65c;
   }
+  10% {
+    color: #5cd67c;
+  }
+  15% {
+    color: #d68d5c;
+  }
+  20% {
+    color: #5c85d6;
+  }
+  25% {
+    color: #5cd6c0;
+  }
+  30% {
+    color: #ce5cd6;
+  }
+  35% {
+    color: #d6875c;
+  }
+  40% {
+    color: #5cd6ce;
+  }
+  45% {
+    color: #d65c95;
+  }
+  50% {
+    color: #d65ca3;
+  }
+  55% {
+    color: #d6605c;
+  }
   60% {
-    color: #5c76d6;
+    color: #d6625c;
   }
   65% {
-    color: #d67e5c;
+    color: #a75cd6;
   }
   70% {
-    color: #5cb4d6;
+    color: #5cd4d6;
   }
   75% {
-    color: #8d5cd6;
+    color: #c05cd6;
   }
   80% {
-    color: #5cd6b8;
+    color: #d65c70;
   }
   85% {
-    color: #d65c62;
+    color: #8dd65c;
   }
   90% {
-    color: #5cd6d0;
+    color: #915cd6;
   }
   95% {
-    color: #5c68d6;
+    color: #d6b65c;
   }
   100% {
-    color: #5ed65c;
+    color: #68d65c;
   }
 }
 

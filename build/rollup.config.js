@@ -36,7 +36,7 @@ module.exports = {
   input: path.resolve(__dirname, '../js/src/index.js'),
   output: {
     banner: `/*!
-  * CoreUI Pro v${pkg.version} (${pkg.homepage})
+  * MachinaCoreUI Pro v${pkg.version} (${pkg.homepage})
   * Copyright ${year} ${pkg.author.name}
   * Licensed under MIT (${pkg.homepage})
   */`,

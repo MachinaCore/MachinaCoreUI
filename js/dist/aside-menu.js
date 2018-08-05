@@ -4,8 +4,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * CoreUI (v2.0.3): aside-menu.js
- * Licensed under MIT (https://coreui.io/license)
+ * MachinaCoreUI (v2.0.3): aside-menu.js
+ * Licensed under MIT
  * --------------------------------------------------------------------------
  */
 var AsideMenu = function ($) {

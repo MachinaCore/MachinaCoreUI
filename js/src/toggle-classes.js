@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------------------------------------
- * CoreUI (v2.0.3): toggle-classes.js
- * Licensed under MIT (https://coreui.io/license)
+ * MachinaCoreUI (v2.0.3): toggle-classes.js
+ * Licensed under MIT
  * --------------------------------------------------------------------------
  */
 
