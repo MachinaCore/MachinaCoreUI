@@ -22,15 +22,6 @@
   --white: #fff;
   --gray: #73818f;
   --gray-dark: #2f353a;
-  --gray-100: #f0f3f5;
-  --gray-200: #e4e7ea;
-  --gray-300: #c8ced3;
-  --gray-400: #acb4bc;
-  --gray-500: #8f9ba6;
-  --gray-600: #73818f;
-  --gray-700: #5c6873;
-  --gray-800: #2f353a;
-  --gray-900: #23282c;
   --primary: #e08e0b;
   --secondary: #c8ced3;
   --success: #4dbd74;
@@ -9379,7 +9370,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .breadcrumb {
   position: relative;
-  background-color: rgba(198, 198, 198, 0.5);
+  background-color: #fff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   border-radius: 0;
   border-bottom: 1px solid #c8ced3;
@@ -11210,7 +11201,7 @@ canvas {
   height: 55px;
   padding: 0;
   margin: 0;
-  background-color: #f39c12;
+  background-color: #e08e0b;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -12834,14 +12825,6 @@ table td {
 }
 
 /* No Border radius */
-.form-control {
-  border: 1px solid #c8ced3;
-}
-
-.select2-container--bootstrap .select2-selection {
-  border: 1px solid #c8ced3;
-}
-
 .btn.btn-md {
   font-size: 0.7rem;
   padding: 0.7rem 1.6rem;
@@ -12849,7 +12832,6 @@ table td {
 
 .input-group-append {
   padding: 0.5rem 0.75rem;
-  border: 1px solid #c8ced3;
 }
 
 /* User Panel */
@@ -13554,133 +13536,133 @@ table.display tr:nth-child(even).yellowCell {
 
 @-webkit-keyframes anim-text-flow-keys {
   0% {
-    color: #d65c76;
+    color: #6c5cd6;
   }
   5% {
-    color: #d2d65c;
+    color: #9f5cd6;
   }
   10% {
-    color: #d6b15c;
+    color: #d65c64;
   }
   15% {
-    color: #5cd685;
+    color: #c25cd6;
   }
   20% {
-    color: #665cd6;
+    color: #d65c5e;
   }
   25% {
-    color: #5cc4d6;
+    color: #d65c9b;
   }
   30% {
-    color: #a1d65c;
+    color: #d65c95;
   }
   35% {
-    color: #5cd0d6;
+    color: #5cd670;
   }
   40% {
-    color: #d67a5c;
+    color: #5cbed6;
   }
   45% {
-    color: #d6625c;
+    color: #5cd66a;
   }
   50% {
-    color: #d6a35c;
+    color: #5cc0d6;
   }
   55% {
-    color: #d65cb1;
+    color: #d65c68;
   }
   60% {
-    color: #5cd6bc;
+    color: #5c6ed6;
   }
   65% {
-    color: #d65cce;
+    color: #5c8dd6;
   }
   70% {
-    color: #d6875c;
-  }
-  75% {
-    color: #6e5cd6;
-  }
-  80% {
-    color: #89d65c;
-  }
-  85% {
     color: #d0d65c;
   }
+  75% {
+    color: #8d5cd6;
+  }
+  80% {
+    color: #5c66d6;
+  }
+  85% {
+    color: #d65ca7;
+  }
   90% {
-    color: #d65cc4;
+    color: #5cbcd6;
   }
   95% {
-    color: #d65c8b;
+    color: #d66e5c;
   }
   100% {
-    color: #d6625c;
+    color: #d6855c;
   }
 }
 
 @keyframes anim-text-flow-keys {
   0% {
-    color: #d65c76;
+    color: #6c5cd6;
   }
   5% {
-    color: #d2d65c;
+    color: #9f5cd6;
   }
   10% {
-    color: #d6b15c;
+    color: #d65c64;
   }
   15% {
-    color: #5cd685;
+    color: #c25cd6;
   }
   20% {
-    color: #665cd6;
+    color: #d65c5e;
   }
   25% {
-    color: #5cc4d6;
+    color: #d65c9b;
   }
   30% {
-    color: #a1d65c;
+    color: #d65c95;
   }
   35% {
-    color: #5cd0d6;
+    color: #5cd670;
   }
   40% {
-    color: #d67a5c;
+    color: #5cbed6;
   }
   45% {
-    color: #d6625c;
+    color: #5cd66a;
   }
   50% {
-    color: #d6a35c;
+    color: #5cc0d6;
   }
   55% {
-    color: #d65cb1;
+    color: #d65c68;
   }
   60% {
-    color: #5cd6bc;
+    color: #5c6ed6;
   }
   65% {
-    color: #d65cce;
+    color: #5c8dd6;
   }
   70% {
-    color: #d6875c;
-  }
-  75% {
-    color: #6e5cd6;
-  }
-  80% {
-    color: #89d65c;
-  }
-  85% {
     color: #d0d65c;
   }
+  75% {
+    color: #8d5cd6;
+  }
+  80% {
+    color: #5c66d6;
+  }
+  85% {
+    color: #d65ca7;
+  }
   90% {
-    color: #d65cc4;
+    color: #5cbcd6;
   }
   95% {
-    color: #d65c8b;
+    color: #d66e5c;
   }
   100% {
-    color: #d6625c;
+    color: #d6855c;
   }
 }
 
@@ -15855,96 +15837,6 @@ button.bg-gray-900:focus {
   background-color: #0c0e10 !important;
 }
 
-.bg-gray-100 {
-  background-color: #f0f3f5 !important;
-}
-
-a.bg-gray-100:hover, a.bg-gray-100:focus,
-button.bg-gray-100:hover,
-button.bg-gray-100:focus {
-  background-color: #d1dbe1 !important;
-}
-
-.bg-gray-200 {
-  background-color: #e4e7ea !important;
-}
-
-a.bg-gray-200:hover, a.bg-gray-200:focus,
-button.bg-gray-200:hover,
-button.bg-gray-200:focus {
-  background-color: #c7ced4 !important;
-}
-
-.bg-gray-300 {
-  background-color: #c8ced3 !important;
-}
-
-a.bg-gray-300:hover, a.bg-gray-300:focus,
-button.bg-gray-300:hover,
-button.bg-gray-300:focus {
-  background-color: #acb5bc !important;
-}
-
-.bg-gray-400 {
-  background-color: #acb4bc !important;
-}
-
-a.bg-gray-400:hover, a.bg-gray-400:focus,
-button.bg-gray-400:hover,
-button.bg-gray-400:focus {
-  background-color: #909ba5 !important;
-}
-
-.bg-gray-500 {
-  background-color: #8f9ba6 !important;
-}
-
-a.bg-gray-500:hover, a.bg-gray-500:focus,
-button.bg-gray-500:hover,
-button.bg-gray-500:focus {
-  background-color: #73828f !important;
-}
-
-.bg-gray-600 {
-  background-color: #73818f !important;
-}
-
-a.bg-gray-600:hover, a.bg-gray-600:focus,
-button.bg-gray-600:hover,
-button.bg-gray-600:focus {
-  background-color: #5c6873 !important;
-}
-
-.bg-gray-700 {
-  background-color: #5c6873 !important;
-}
-
-a.bg-gray-700:hover, a.bg-gray-700:focus,
-button.bg-gray-700:hover,
-button.bg-gray-700:focus {
-  background-color: #454e57 !important;
-}
-
-.bg-gray-800 {
-  background-color: #2f353a !important;
-}
-
-a.bg-gray-800:hover, a.bg-gray-800:focus,
-button.bg-gray-800:hover,
-button.bg-gray-800:focus {
-  background-color: #181b1e !important;
-}
-
-.bg-gray-900 {
-  background-color: #23282c !important;
-}
-
-a.bg-gray-900:hover, a.bg-gray-900:focus,
-button.bg-gray-900:hover,
-button.bg-gray-900:focus {
-  background-color: #0c0e10 !important;
-}
-
 .bg-box {
   display: -ms-flexbox;
   display: flex;
@@ -16358,15 +16250,6 @@ body {
   white: #fff;
   gray: #73818f;
   gray-dark: #2f353a;
-  gray-100: #f0f3f5;
-  gray-200: #e4e7ea;
-  gray-300: #c8ced3;
-  gray-400: #acb4bc;
-  gray-500: #8f9ba6;
-  gray-600: #73818f;
-  gray-700: #5c6873;
-  gray-800: #2f353a;
-  gray-900: #23282c;
   primary: #e08e0b;
   secondary: #c8ced3;
   success: #4dbd74;

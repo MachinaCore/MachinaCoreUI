@@ -48,14 +48,6 @@
 
 /* No Border radius */
 
-.form-control {
-    border: 1px solid $border-color;
-}
-
-.select2-container--bootstrap .select2-selection {
-    border: 1px solid $border-color;
-}
-
 .btn.btn-md {
     font-size: 0.7rem;
     padding: 0.7rem 1.6rem;
@@ -63,7 +55,6 @@
 
 .input-group-append {
     padding: 0.5rem 0.75rem;
-    border: 1px solid $border-color;
 }
 
 /* User Panel */

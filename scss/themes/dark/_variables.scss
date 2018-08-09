@@ -17,7 +17,7 @@ $white:      #fff;
 
 $blue:       #20a8d8 !default;
 $red:        #f86c6b !default;
-$orange:     #f8cb00 !default;
+$orange:     #e08e0b !default;
 $yellow:     #ffc107 !default;
 $green:      #4dbd74 !default;
 $light-blue: #63c2de !default;
@@ -99,11 +99,11 @@ $nav-tabs-link-active-border-color: $border-color $border-color $border-color !d
 $tab-content-bg:                    $gray-700 !default;
 
 // Navbar
-$navbar-bg:                $gray-700 !default;
-$navbar-color:             $gray-300 !default;
-$navbar-hover-color:       $gray-200 !default;
-$navbar-active-color:      $gray-200 !default;
-$navbar-disabled-color:    $gray-600 !default;
+$navbar-bg:                #f39c12 !default;
+$navbar-color:             $white !default;
+$navbar-hover-color:       $gray-800 !default;
+$navbar-active-color:      $gray-800 !default;
+$navbar-disabled-color:    $gray-300 !default;
 
 // Pagination
 
@@ -118,7 +118,7 @@ $pagination-disabled-bg:            $gray-900 !default;
 $pagination-disabled-border-color:  $border-color !default;
 
 // Breadcrumb
-$breadcrumb-bg:            $gray-700 !default;
+$breadcrumb-bg:            rgba(198, 198, 198, .2) !default;
 $breadcrumb-divider-color: $gray-100 !default;
 $breadcrumb-active-color:  $gray-100 !default;
 
