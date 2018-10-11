@@ -2,6 +2,10 @@ button {
   cursor: pointer;
 }
 
+button:focus {
+    outline: none;
+}
+
 .btn-transparent {
   color: #fff;
   background-color: transparent;
